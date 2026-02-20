@@ -32,7 +32,7 @@
   --transition-fast: 0.15s ease;
 }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: hidden; }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -41,6 +41,7 @@ body {
   color: var(--text);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -219,7 +220,11 @@ section { padding: 5rem 0; }
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 12px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 .menu-toggle span {
   width: 24px;
@@ -628,6 +633,7 @@ section { padding: 5rem 0; }
   align-items: center;
   gap: 1rem;
   padding: 0;
+  min-height: 44px;
 }
 
 .faq-question svg {
@@ -761,7 +767,8 @@ section { padding: 5rem 0; }
 /* --- Map placeholder --- */
 .map-placeholder {
   width: 100%;
-  height: 350px;
+  min-height: 250px;
+  height: auto;
   background: var(--primary-light);
   border-radius: var(--radius-md);
   display: flex;
@@ -771,6 +778,7 @@ section { padding: 5rem 0; }
   font-size: 1rem;
   border: 1px solid var(--border);
   margin: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 /* --- Footer --- */
@@ -874,6 +882,13 @@ section { padding: 5rem 0; }
   .value-props { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 968px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .header-phone { font-size: 0.85rem; }
+}
+
 @media (max-width: 768px) {
   section { padding: 3.5rem 0; }
   .hero { padding: 120px 1.5rem 60px; }
@@ -895,8 +910,9 @@ section { padding: 5rem 0; }
     gap: 0;
   }
   .nav-links.active { display: flex; }
-  .nav-links li { padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
-  .nav-links li:last-child { border: none; padding-top: 1rem; }
+  .nav-links li { border-bottom: 1px solid var(--border); }
+  .nav-links li a { display: block; padding: 0.875rem 0; min-height: 44px; }
+  .nav-links li:last-child { border: none; padding-top: 0.5rem; }
   .menu-toggle { display: flex; }
   .mobile-cta { display: block; }
   .footer { padding-bottom: 5rem; }
@@ -1129,6 +1145,7 @@ section { padding: 5rem 0; }
 .floating-cta.visible .fcta-text { animation: pulse-ring-blue 2s ease-out 3.5s 3; }
 
 @media (max-width: 768px) {
+  body { padding-bottom: 56px; }
   .floating-cta {
     bottom: 0;
     left: 0;
