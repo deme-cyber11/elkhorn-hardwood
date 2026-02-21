@@ -921,13 +921,42 @@ section { padding: 5rem 0; }
   .about-stats { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 }
 
+@media (max-width: 600px) {
+  .container { padding: 0 1rem; }
+  section { padding: 2.5rem 0; }
+  .card { padding: 1.5rem; }
+  .testimonial-card { padding: 1.5rem; }
+  .pricing-card { padding: 1.5rem; }
+  .guarantee-section { padding: 2rem 1.5rem; }
+  .footer { padding: 3rem 1rem 2rem; }
+  .footer-grid { gap: 2rem; }
+  .cta-section { padding: 3.5rem 1rem; }
+  .hero .hero-desc { font-size: 1rem; }
+  .before-after-pair { grid-template-columns: 1fr; gap: 1rem; }
+  .contact-grid { gap: 2rem; }
+}
+
 @media (max-width: 480px) {
-  .hero { padding: 110px 1rem 50px; }
+  .hero { padding: 110px 1rem 50px; min-height: auto; min-height: unset; }
   .page-hero { padding: 110px 1rem 40px; }
   .hero-buttons { flex-direction: column; align-items: center; }
+  .hero-buttons .btn { width: 100%; }
   .hero-trust { flex-direction: column; align-items: center; gap: 12px; }
   .areas-grid { grid-template-columns: 1fr; }
   .trust-bar-inner { flex-direction: column; align-items: center; gap: 0.75rem; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.4rem; }
+  .btn { padding: 14px 24px; font-size: 1rem; min-height: 48px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea { font-size: 16px; padding: 14px 16px; }
+  .faq-question { font-size: 1rem; min-height: 48px; padding: 4px 0; }
+  .footer-links a { font-size: 0.92rem; padding: 4px 0; display: inline-block; min-height: 44px; line-height: 36px; }
+  .pricing-card .price { font-size: 1.6rem; }
+  .service-price { font-size: 0.85rem; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .cta-buttons .btn { width: 100%; }
+  .error-page h1 { font-size: 4rem; }
 }
 
 /* --- Gallery Grid --- */
@@ -1604,6 +1633,7 @@ textarea:focus-visible {
 /* --- Premium Hero Enhancements --- */
 .hero {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
 }
