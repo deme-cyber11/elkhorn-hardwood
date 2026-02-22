@@ -509,10 +509,13 @@
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('revealed');
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
+    }, { threshold: 0.01 });
     els.forEach(function(el) { observer.observe(el); });
   }
 
@@ -521,4 +524,13 @@
   } else {
     initReveal();
   }
+
+  // Fallback: force all reveals visible after 4 seconds no matter what
+  setTimeout(function() {
+    document.querySelectorAll('.reveal:not(.revealed)').forEach(function(el) {
+      el.classList.add('revealed');
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    });
+  }, 4000);
 })();
