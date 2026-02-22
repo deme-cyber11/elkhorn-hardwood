@@ -1,6 +1,31 @@
-.DS_Store
-.claude
+# Business strategy & sensitive docs
+**/discovery-call-notes*
+**/growth-plan*
+**/GAME-PLAN*
+**/COMPETITOR-ANALYSIS*
+**/PROJECT-STATUS*
+**/PROJECT-LOG*
+**/keyword-strategy*
+**/onboarding-guide*
+**/CITATIONS-READY*
+**/SUBMISSION-CHECKLIST*
+CLAUDE.md
+
+# Dev tooling
+skills/
+skills_extracted*/
+Claude-Skills-Library/
 node_modules/
+
+# System files
+.DS_Store
+desktop.ini
+*.zip
+tmp/
+temp_*/
+
+# Project-specific
+.claude
 .env
 .vscode/
 *.log
