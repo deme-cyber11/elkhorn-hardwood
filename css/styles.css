@@ -1341,24 +1341,23 @@ section { padding: 5rem 0; }
 .social-proof-inline svg { color: var(--accent); }
 
 /* --- Scroll Reveal Animations (CSS only) --- */
-/* Reveal: content starts hidden, JS observer adds .revealed on scroll.
-   3-second CSS fallback ensures content shows even if JS breaks. */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.reveal.revealed {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-/* Noscript/JS-failure fallback: force visible after 3s */
-@supports (animation: none) {
-  .reveal:not(.revealed) {
-    animation: _rvl 0.6s ease 3s both;
+/* Reveal: on desktop, content fades in on scroll via JS IntersectionObserver.
+   On mobile (<769px), everything is visible immediately — no animations. */
+@media (min-width: 769px) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  @keyframes _rvl {
-    to { opacity: 1; transform: none; }
+  .reveal.revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+}
+@media (max-width: 768px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
@@ -1778,4 +1777,4 @@ h1, h2, h3, h4, h5, h6 {
   body { padding-bottom: 60px; }
 }
 
-/* (reveal fallback moved to main .reveal block above) */
+/* end reveal */
