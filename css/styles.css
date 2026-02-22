@@ -1341,14 +1341,25 @@ section { padding: 5rem 0; }
 .social-proof-inline svg { color: var(--accent); }
 
 /* --- Scroll Reveal Animations (CSS only) --- */
+/* Reveal: content starts hidden, JS observer adds .revealed on scroll.
+   3-second CSS fallback ensures content shows even if JS breaks. */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+/* Noscript/JS-failure fallback: force visible after 3s */
+@supports (animation: none) {
+  .reveal:not(.revealed) {
+    animation: _rvl 0.6s ease 3s both;
+  }
+  @keyframes _rvl {
+    to { opacity: 1; transform: none; }
+  }
 }
 
 /* --- Enhanced Service Card Hover --- */
@@ -1767,16 +1778,4 @@ h1, h2, h3, h4, h5, h6 {
   body { padding-bottom: 60px; }
 }
 
-/* Reveal: JS adds .revealed class via IntersectionObserver.
-   CSS fallback ensures content shows after 2.5s even if JS fails. */
-.reveal:not(.revealed) {
-  animation: reveal-fallback 0.6s ease 2.5s forwards;
-}
-@keyframes reveal-fallback {
-  to { opacity: 1 !important; transform: translateY(0) !important; }
-}
-.reveal.revealed {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
+/* (reveal fallback moved to main .reveal block above) */
