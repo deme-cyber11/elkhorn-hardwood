@@ -1766,3 +1766,17 @@ h1, h2, h3, h4, h5, h6 {
   .sticky-mobile-cta { display: flex; }
   body { padding-bottom: 60px; }
 }
+
+/* Fallback: reveal content after 3s even if JS fails */
+@keyframes reveal-fallback {
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  animation: reveal-fallback 0.5s ease forwards;
+  animation-delay: 2s;
+}
+.reveal.revealed {
+  animation: none;
+  opacity: 1;
+  transform: translateY(0);
+}
