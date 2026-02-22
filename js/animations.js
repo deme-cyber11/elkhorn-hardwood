@@ -500,7 +500,8 @@
   }
 })();
 
-  // ── Reveal on Scroll ──
+// ── Reveal on Scroll (runs independently) ──
+(function() {
   function initReveal() {
     var els = document.querySelectorAll('.reveal');
     if (!els.length) return;
@@ -511,8 +512,13 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
     els.forEach(function(el) { observer.observe(el); });
   }
 
-  initReveal();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReveal);
+  } else {
+    initReveal();
+  }
+})();
