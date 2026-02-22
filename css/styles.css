@@ -1767,16 +1767,16 @@ h1, h2, h3, h4, h5, h6 {
   body { padding-bottom: 60px; }
 }
 
-/* Fallback: reveal content after 3s even if JS fails */
-@keyframes reveal-fallback {
-  to { opacity: 1; transform: translateY(0); }
+/* Reveal: JS adds .revealed class via IntersectionObserver.
+   CSS fallback ensures content shows after 2.5s even if JS fails. */
+.reveal:not(.revealed) {
+  animation: reveal-fallback 0.6s ease 2.5s forwards;
 }
-.reveal {
-  animation: reveal-fallback 0.5s ease forwards;
-  animation-delay: 2s;
+@keyframes reveal-fallback {
+  to { opacity: 1 !important; transform: translateY(0) !important; }
 }
 .reveal.revealed {
-  animation: none;
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
