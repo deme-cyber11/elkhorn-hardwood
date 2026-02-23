@@ -332,15 +332,6 @@
   }
 
   // ── AOS ──
-  function initAOS() {
-    if (typeof AOS === 'undefined') return;
-    AOS.init({
-      duration: 700,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 80,
-      disable: 'mobile',
-    });
   }
 
   // ── Before/After Comparison Slider ──
@@ -482,7 +473,6 @@
     initGLightbox();
     initTilt();
     initSplitting();
-    initAOS();
     initBeforeAfter();
     initMagneticButtons();
     initHeader();
