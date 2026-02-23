@@ -1717,6 +1717,19 @@ h1, h2, h3, h4, h5, h6 {
     .dropdown-menu li { border-bottom: none; }
 }
 
+/* Pricing Table */
+.pricing-table-wrap { overflow-x: auto; }
+.pricing-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+.pricing-table th { background: var(--primary, #2d5016); color: #fff; padding: 1rem 1.25rem; text-align: left; font-size: 0.95rem; font-weight: 600; }
+.pricing-table td { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border, #e5e0da); font-size: 0.95rem; }
+.pricing-table tbody tr:last-child td { border-bottom: none; }
+.pricing-table tbody tr:hover { background: rgba(0,0,0,0.02); }
+.pricing-table .table-note { color: var(--text-muted, #8a8279); font-size: 0.82rem; font-weight: 400; }
+@media (max-width: 600px) {
+    .pricing-table th, .pricing-table td { padding: 0.75rem 0.75rem; font-size: 0.85rem; }
+    .pricing-table .table-note { font-size: 0.75rem; }
+}
+
 /* Blog cards */
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; margin-top: 2rem; }
 .blog-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: transform 0.3s, box-shadow 0.3s; }
