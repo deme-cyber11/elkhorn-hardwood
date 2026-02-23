@@ -965,8 +965,8 @@ section { padding: 5rem 0; }
   .hero-image { max-width: 500px; margin: 2rem auto 0; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-image { max-width: 500px; margin: 0 auto; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-image { max-width: 100%; margin: 0 auto; aspect-ratio: 16/9; max-height: 280px; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .areas-grid { grid-template-columns: repeat(3, 1fr); }
   .contact-grid { grid-template-columns: 1fr; }
@@ -1016,6 +1016,8 @@ section { padding: 5rem 0; }
 @media (max-width: 600px) {
   .container { padding: 0 1rem; }
   section { padding: 2.5rem 0; }
+  .content-section { padding: 1.5rem 0; }
+  .about-grid .content-section { padding-top: 0; }
   .card { padding: 1.5rem; }
   .testimonial-card { padding: 1.5rem; }
   .pricing-card { padding: 1.5rem; }
