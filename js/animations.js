@@ -155,8 +155,8 @@
     initActiveNav();
     initBeforeAfter();
     initTyped();
-    initCounters();
     forceVisible();
+    initCounters();
   }
 
   if (document.readyState === 'loading') {

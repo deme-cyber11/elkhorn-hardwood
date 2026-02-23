@@ -357,6 +357,8 @@ section { padding: 5rem 0; }
 .page-hero .breadcrumb span {
   color: rgba(255,255,255,0.6);
 }
+.page-hero + section { padding-top: 3rem; }
+@media (max-width: 600px) { .page-hero + section { padding-top: 2rem; } }
 
 /* --- Trust Bar --- */
 .trust-bar {
@@ -609,9 +611,9 @@ section { padding: 5rem 0; }
 .area-card p { font-size: 0.78rem; color: var(--text-muted); }
 
 /* --- FAQ --- */
-.faq-section { background: var(--surface); }
+.faq-section { background: var(--surface); padding-top: 3rem; }
 
-.faq-list { max-width: 800px; margin: 3rem auto 0; }
+.faq-list { max-width: 800px; margin: 0 auto; }
 
 .faq-item {
   border-bottom: 1px solid var(--border);
