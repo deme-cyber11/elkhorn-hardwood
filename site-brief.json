@@ -1,0 +1,48 @@
+{
+  "site_name": "Elkhorn Hardwood",
+  "niche": "Hardwood Floor Installation & Refinishing",
+  "city": "Elkhorn",
+  "state": "NE",
+  "state_full": "Nebraska",
+  "county": "Douglas County",
+  "metro": "Omaha",
+  "domain": "elkhornhardwood.com",
+  "phone": "(402) 771-4422",
+  "phone_e164": "+14027714422",
+  "twilio_number": "+14027714422",
+  "area_code": "402",
+  "zip": "68022",
+  "address_city_state": "Elkhorn, NE 68022",
+  "rental_tier": "$130/mo",
+  "niche_pricing": "130",
+  "ga4_id": "G-D6ZBY16329",
+  "clarity_id": "vqc68ce75g",
+  "web3forms_key": "0219881f-13e5-4175-b720-517b8d10c028",
+  "indexnow_key": "a3f7b2c9d4e1f8a5b6c3d0e7f4a1b8c5",
+  "github_repo": "deme-cyber11/elkhorn-hardwood",
+  "cname": "elkhornhardwood.com",
+  "rebuild": true,
+  "rebuild_reason": "Previous build had Colorado Springs CO content by mistake. Full content swap to Elkhorn, Nebraska required.",
+  "target_keywords": [
+    "hardwood floor installation elkhorn ne",
+    "hardwood floor refinishing elkhorn nebraska",
+    "hardwood flooring elkhorn omaha",
+    "wood floor installation omaha west"
+  ],
+  "primary_keyword": "hardwood floor installation elkhorn ne",
+  "competitors_to_research": [
+    "footprintsfloors.com",
+    "bbb.org/search elkhorn ne hardwood",
+    "angi.com elkhorn ne hardwood"
+  ],
+  "service_area_cities": [
+    "Elkhorn", "Omaha", "Gretna", "Papillion", "La Vista", "Bellevue", "Ralston", "Millard", "Bennington", "Valley"
+  ],
+  "license_claim": "Licensed & Insured",
+  "warranty": "3-year finish warranty",
+  "certifications": "NWFA Certified",
+  "brand_voice": "Local Omaha-area hardwood craftsmen. Dustless sanding. Custom stains. Family-owned.",
+  "nwfa_certified": true,
+  "climate_note": "Nebraska's seasonal humidity swings (dry winters, humid summers) require proper acclimation and moisture testing before installation.",
+  "instructions": "REBUILD — replace ALL Colorado Springs / CO content. Every reference to Colorado Springs, Pikes Peak region, CO, 80903, (719) must be replaced with Elkhorn NE, Omaha metro, NE, 68022, (402). Keep domain elkhornhardwood.com and all existing page structure (index, about, services, faq, cost-guide, contact, locations, blog). Update schema, meta tags, titles, H1s, body copy, phone numbers, footer. The site currently has ~15 pages — update all of them. Commit and push when done."
+}
