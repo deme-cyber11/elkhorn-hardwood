@@ -1,0 +1,23 @@
+[
+  {
+    "index": 1,
+    "slug": "floor-repair-hero",
+    "prompt": "Hardwood floor repair in an Omaha Nebraska area home, skilled technician hand-chiseling out a water-damaged section of maple hardwood flooring and preparing to weave in new matching boards, close-up of the repair zone showing the precision cut edges where old and new wood will meet, traditional Midwestern two-story home interior with neutral walls and natural oak trim, warm afternoon sunlight from a west-facing window casting long shadows across the hardwood surface, shot on Canon EOS 5D Mark IV with 50mm f/1.4 lens, low angle emphasizing the wood grain texture and craftsmanship of the repair, photorealistic detail photography",
+    "negative_prompt": "cartoon, illustration, anime, CGI, 3D render, watermark, text overlay, stock photo watermark, oversaturated colors, blurry, low resolution",
+    "category": "hero"
+  },
+  {
+    "index": 2,
+    "slug": "hardwood-installation-hero",
+    "prompt": "New hardwood floor installation in a modern Elkhorn Nebraska subdivision home, professional installer kneeling and using a pneumatic cleat nailer to fasten engineered hickory hardwood planks in a spacious open-concept living area, boxes of uninstalled flooring stacked against the wall, large suburban Nebraska home with vaulted ceilings and sliding glass doors showing a flat Midwestern backyard with a privacy fence, bright diffused daylight filling the room, shot on Sony A7R IV with 16-35mm f/2.8 lens, wide angle perspective from the entryway showing the full installation in progress, photorealistic residential construction photography",
+    "negative_prompt": "cartoon, illustration, anime, CGI, 3D render, watermark, text overlay, stock photo watermark, oversaturated colors, blurry, low resolution",
+    "category": "hero"
+  },
+  {
+    "index": 3,
+    "slug": "hardwood-refinishing-hero",
+    "prompt": "Hardwood floor refinishing project in an Omaha Nebraska home, technician applying oil-based polyurethane finish with a lambswool applicator across a large living room of freshly sanded red oak flooring, the wet finish creating a rich amber glow on the raw wood, furniture cleared out of the room stacked in an adjacent hallway, classic Omaha Dundee neighborhood bungalow interior with original woodwork and arched doorways, soft natural light from sheer-curtained windows, shot on Nikon D850 with 35mm f/1.4 lens, medium-low angle showing the glossy wet finish stretching into the background, photorealistic home renovation photography with warm Midwestern tones",
+    "negative_prompt": "cartoon, illustration, anime, CGI, 3D render, watermark, text overlay, stock photo watermark, oversaturated colors, blurry, low resolution",
+    "category": "hero"
+  }
+]
