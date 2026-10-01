@@ -71,6 +71,12 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 .success a{color:#e94560;font-weight:600}
 .footer{text-align:center;padding:32px 16px;font-size:.8125rem;color:#94a3b8}
 .footer a{color:#e94560;font-weight:500}
+.nav__links{display:flex;gap:22px;margin-left:auto;margin-right:20px}
+.nav__links a{color:#cbd5e1;font-weight:600;font-size:.9rem}
+.nav__links a:hover{color:#fff}
+/* Round 2 (2026-10-01): phone and tablet tap targets and text size */
+@media(max-width:1199px){.nav__logo,.nav__links a,.nav__cta{min-height:44px;display:inline-flex;align-items:center}.nav__logo{gap:.28em}.nav__links a{min-width:44px;justify-content:center}.check-item input[type=checkbox]{height:44px;margin:-13px 0}}
+@media(max-width:600px){.nav{flex-wrap:wrap;padding:10px 16px}.nav__links{order:3;width:100%;margin:0;justify-content:space-around;border-top:1px solid rgba(255,255,255,.12)}.footer{font-size:15px}}
 </style>
 <!-- favicon + link preview (tools/link-preview-kit.py) -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -87,7 +93,8 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 </head>
 <body>
 <nav class="nav">
-<div class="nav__logo">Hardwood <span>Pro</span></div>
+<a class="nav__logo" href="/">Elkhorn <span>Hardwood</span></a>
+<span class="nav__links"><a href="/services.html">Services</a><a href="/faq.html">FAQ</a></span>
 <a class="nav__cta" href="tel:4027714422">(402) 771-4422</a>
 </nav>
 <main class="page">
@@ -341,7 +348,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 </div>
 </main>
 <div class="footer">
-<p>© 2026 Hardwood Floor Installation Elkhorn NE  |  Licensed &amp; Insured |  <a href="tel:4027714422">(402) 771-4422</a></p>
+<p>© 2026 Elkhorn Hardwood  |  Licensed &amp; Insured |  <a href="tel:4027714422">(402) 771-4422</a></p>
 </div>
 <script>
 if(window.location.hash==='#success'){document.getElementById('form').style.display='none';document.getElementById('success').style.display='block';}

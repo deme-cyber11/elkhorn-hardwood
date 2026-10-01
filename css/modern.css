@@ -537,3 +537,65 @@ body.dm-home .sticky-cta { display: none; }
   body.dm-home .sticky-cta a:first-child { background: var(--cta); color: var(--cta-ink); }
   body.dm-home .sticky-cta a:last-child { background: var(--navy); color: #fff; }
 }
+
+/* ===== Round 2 (2026-10-01): phone + tablet only. Every rule below sits inside a max-width
+   query that stops at 1199px, so the 1440 desktop layout is untouched. ===== */
+@media (max-width: 1199px) {
+  /* tap targets: logos, menu buttons, footer phone, banner close, breadcrumbs */
+  body.dm a.logo, body.dm a.nav__logo { min-height: 44px; align-items: center; }
+  body.dm .nav__hamburger { min-height: 44px; }
+  body.dm .footer__phone { min-height: 44px; display: inline-flex; align-items: center; }
+  body.dm .scroll-cta-banner .scta-close { width: 44px; height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  body.dm nav.breadcrumb a { min-height: 44px; display: inline-flex; align-items: center; }
+  body.dm > header:not(.header):not(.dm-hero) > nav > a { min-height: 44px; display: inline-flex; align-items: center; }
+  body.dm > header:not(.header):not(.dm-hero) .nav-links > li > a { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  body.dm > header:not(.header):not(.dm-hero) .dropdown-menu a { min-height: 44px; display: flex; align-items: center; }
+}
+/* tablet landscape / small laptop: the full inner-page nav is cramped (logo touches the links,
+   "Blog" and the phone number wrap), so use the same hamburger menu phones already use */
+@media (min-width: 769px) and (max-width: 1199px) {
+  body.dm .header .menu-toggle { display: flex; }
+  body.dm .header .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 1rem 1.5rem 1.5rem; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); max-height: calc(100vh - 80px); overflow-y: auto; }
+  body.dm .header .nav-links.active { display: flex; }
+  body.dm .header .nav-links li { border-bottom: 1px solid var(--line); }
+  body.dm .header .nav-links li:last-child { border: none; padding-top: .5rem; }
+  body.dm .header .nav-links li a { display: flex; align-items: center; min-height: 44px; padding: .5rem 0; }
+  body.dm .header .nav-links .btn { justify-content: center; }
+  body.dm .header .dropdown-menu { display: block !important; position: static; box-shadow: none; border: 0; border-radius: 0; min-width: 100%; padding: 0 0 .5rem; background: transparent; opacity: 1; visibility: visible; transform: none; }
+  body.dm .header .dropdown-menu li { border: 0; }
+  body.dm .header .dropdown-menu li a { padding-left: 1.25rem; font-weight: 500; }
+}
+/* phones: body copy at least 15px */
+@media (max-width: 600px) {
+  body.dm .feature-card p, body.dm td, body.dm .map-placeholder p, body.dm form.card p, body.dm .footer-bottom p { font-size: 15px; }
+}
+/* bare single-page header (bellevue): it had only the brand and phone, no way to reach the rest of
+   the site, so it now carries three links (a real navigation gap on every width, desktop included) */
+body.dm > header:not(.header):not(.dm-hero) .hdr-links { display: flex; gap: 26px; margin-left: auto; margin-right: 8px; }
+body.dm > header:not(.header):not(.dm-hero) .hdr-links a { color: var(--ink-2); font-weight: 600; text-decoration: none; }
+body.dm > header:not(.header):not(.dm-hero) .hdr-links a:hover { color: var(--brand); }
+@media (max-width: 1199px) {
+  body.dm > header:not(.header):not(.dm-hero) .hdr-links a { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (max-width: 640px) {
+  body.dm > header:not(.header):not(.dm-hero) > nav { flex-wrap: wrap; row-gap: 0; }
+  body.dm > header:not(.header):not(.dm-hero) .hdr-links { order: 3; width: 100%; margin: 0; justify-content: space-between; gap: 8px; border-top: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
+  body.dm:has(> header:not(.header):not(.dm-hero) .hdr-links) { --hdr: 112px; }
+}
+@media (max-width: 1199px) {
+  body.dm nav.breadcrumb a { min-width: 44px; justify-content: center; }
+  body.dm .dm-wrap li > a[href^="tel:"] { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (max-width: 768px) {
+  /* phones: keep the call and quote buttons on screen from the top of the page, not only after scrolling */
+  body.dm .floating-cta { transform: none; opacity: 1; pointer-events: auto; }
+}
+@media (max-width: 600px) {
+  body.dm .map-placeholder p, body.dm form.card p { font-size: 15px !important; }
+}
+@media (max-width: 768px) {
+  /* the quote half of the phone call/quote bar had no background (white icon on a see-through bar) */
+  body.dm .floating-cta .fcta-quote { background: var(--navy); color: #fff; }
+}
