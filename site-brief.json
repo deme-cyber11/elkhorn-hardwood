@@ -44,5 +44,17 @@
   "brand_voice": "Local Omaha-area hardwood craftsmen. Dustless sanding. Custom stains. Family-owned.",
   "nwfa_certified": true,
   "climate_note": "Nebraska's seasonal humidity swings (dry winters, humid summers) require proper acclimation and moisture testing before installation.",
-  "instructions": "REBUILD — replace ALL Colorado Springs / CO content. Every reference to Colorado Springs, Pikes Peak region, CO, 80903, (719) must be replaced with Elkhorn NE, Omaha metro, NE, 68022, (402). Keep domain elkhornhardwood.com and all existing page structure (index, about, services, faq, cost-guide, contact, locations, blog). Update schema, meta tags, titles, H1s, body copy, phone numbers, footer. The site currently has ~15 pages — update all of them. Commit and push when done."
+  "instructions": "REBUILD — replace ALL Colorado Springs / CO content. Every reference to Colorado Springs, Pikes Peak region, CO, 80903, (719) must be replaced with Elkhorn NE, Omaha metro, NE, 68022, (402). Keep domain elkhornhardwood.com and all existing page structure (index, about, services, faq, cost-guide, contact, locations, blog). Update schema, meta tags, titles, H1s, body copy, phone numbers, footer. The site currently has ~15 pages — update all of them. Commit and push when done.",
+  "lead_disclosure": {
+    "_why": "Costa approved 2026-10-09, live on elkhornhardwood.com since 71a8066. A rebuild must keep all three changes byte for byte. The words have one source: tools/lead_disclosure.py in rank-and-rent-system (deme-cyber11/rank-and-rent-system).",
+    "privacy_paragraph_html": "<p>When you request a quote, fill out a form or call us, we send your request and your contact details (name, phone number, email and address) to an independent local contractor who serves your area, so they can contact you about your project. That contractor may pay us a fee for the referral. If they cannot take the job, we may pass your request to another local contractor. Before a contractor takes the job, other local contractors may see a description of the work, any photos you send, your first name and your street, but not your last name, house number, phone number or email. We do not sell your information for unrelated marketing.</p>",
+    "privacy_rule": "privacy-policy.html carries privacy_paragraph_html verbatim, in place of any sentence saying we do not sell, trade or rent personal information, followed by <p>We may share your information in the following situations:</p>. Never write a no-sale claim: every request goes to a contractor who may pay a referral fee.",
+    "form_notice_html": "<p class=\"itd-form-notice\" style=\"grid-column:1/-1;margin:.75rem 0 0;font-size:.8125rem;line-height:1.5;text-align:center\">Your request and contact details go to an independent local contractor who serves your area, so they can contact you about your project.</p>",
+    "form_notice_rule": "Written by post_build apply, never typed by hand: on its own line immediately before </form> of every lead form (a form posting to the lead worker /ingest).",
+    "d24_rule": "The itd-d24 page attribution block and the hidden page_url field are written by post_build apply, never typed by hand.",
+    "post_build": [
+      "python3 /Users/costademetral/RankAndRent/tools/lead_disclosure.py apply <site-dir>",
+      "python3 /Users/costademetral/RankAndRent/tools/lead_disclosure.py check <site-dir> must exit 0 before any commit or push"
+    ]
+  }
 }
